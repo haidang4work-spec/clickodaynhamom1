@@ -203,7 +203,8 @@ function initAudio() {
   } catch (e) { ac = null; }
 }
 let lastPop = 0;
-function playPop() {
+function playPop() { 
+  return;
   if (!ac) return;
   const t = performance.now();
   if (t - lastPop < 90) return;
