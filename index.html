@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chúc Mừng Đặc Biệt! ✨</title>
+<title>✨ TIGER FAMILY ✨</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
@@ -30,8 +30,8 @@ button{font-family:inherit;border:0;cursor:pointer}
   font-size:13px;font-weight:600;color:#fde68a;white-space:nowrap;max-width:94vw;overflow:hidden;text-overflow:ellipsis}
 #status i{width:9px;height:9px;border-radius:50%;background:#34d399;flex:none}
 
-main{position:relative;z-index:20;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:54px 16px 84px}
-/* Tăng max-width lên 980px cho màn hình laptop rộng rãi */
+/* Căn giữa đều trên-dưới sau khi bỏ thanh nút dưới cùng */
+main{position:relative;z-index:20;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:56px 16px 24px}
 .stage{width:100%;max-width:980px;display:flex;flex-direction:column;align-items:center;text-align:center;
   transition:opacity .5s ease,transform .5s ease}
 .stage.off{opacity:0;visibility:hidden;pointer-events:none;transform:scale(.92) translateY(16px);position:absolute;transition:opacity .4s,transform .4s,visibility 0s .4s}
@@ -76,12 +76,12 @@ main{position:relative;z-index:20;width:100%;min-height:100vh;display:flex;align
 @keyframes fill{to{transform:scaleX(1)}}
 
 /* Stage video */
-.vhead{margin-bottom:10px}
+.vhead{margin-bottom:12px}
 .tag{display:inline-block;padding:4px 16px;border-radius:99px;background:rgba(15,40,75,.75);border:1px solid rgba(251,191,36,.5);color:#fcd34d;font-size:12px;font-weight:700;margin-bottom:4px}
 .vhead .title{font-size:clamp(20px,4.2vw,34px)}
 .vhead .sub{font-size:clamp(12px,1.8vw,15px);margin-top:4px}
 
-/* Tăng kích thước khung video nhưng vẫn vừa vặn mọi màn hình */
+/* Kích thước khung video tối ưu cho Laptop & Điện thoại */
 .frame{position:relative;width:100%;max-width:960px;padding:8px;border-radius:24px;background:rgba(15,40,75,.9);border:2px solid rgba(255,215,0,.55);
   box-shadow:0 12px 35px rgba(15,40,75,.45),0 0 45px rgba(255,215,0,.3)}
 .frame::after{content:"";position:absolute;inset:-2px;border-radius:26px;pointer-events:none;opacity:0;
@@ -91,8 +91,7 @@ main{position:relative;z-index:20;width:100%;min-height:100vh;display:flex;align
 .c1{top:-12px;left:-12px}.c2{top:-12px;right:-12px}.c3{bottom:-12px;left:-12px}.c4{bottom:-12px;right:-12px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* Giữ tỷ lệ 16/9, tự co giãn vừa chiều cao màn hình laptop & chiều ngang điện thoại */
-.vwrap{position:relative;width:100%;aspect-ratio:16/9;max-height:62vh;border-radius:16px;overflow:hidden;background:#000}
+.vwrap{position:relative;width:100%;aspect-ratio:16/9;max-height:68vh;border-radius:16px;overflow:hidden;background:#000}
 video,#fb{width:100%;height:100%;display:block;object-fit:contain;background:#000}
 #fb{position:absolute;inset:0;pointer-events:none}
 #unmute{position:absolute;top:14px;right:14px;z-index:5;padding:9px 16px;border-radius:99px;font-weight:800;font-size:13px;
@@ -104,37 +103,12 @@ video,#fb{width:100%;height:100%;display:block;object-fit:contain;background:#00
 
 /* Tối ưu riêng cho điện thoại màn hình nhỏ */
 @media(max-width:640px){
-  main{padding:52px 10px 105px}
+  main{padding:52px 10px 20px}
   .frame{padding:6px;border-radius:18px}
-  .vwrap{border-radius:13px;max-height:52vh}
+  .vwrap{border-radius:13px;max-height:60vh}
   .corner{font-size:20px}
   #unmute{padding:7px 12px;font-size:12px;top:10px;right:10px}
-  footer{padding:8px;gap:6px;bottom:10px}
-  .btn{padding:8px 11px;font-size:12px}
 }
-
-/* Thanh nút */
-footer{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30;width:95%;max-width:680px;
-  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px;border-radius:18px;
-  background:rgba(15,40,75,.9);border:1px solid rgba(255,255,255,.25);box-shadow:0 10px 30px rgba(15,40,75,.35)}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:12px;font-size:13px;font-weight:700;color:#fff;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
-.b-gold{background:linear-gradient(90deg,#fbbf24,#f59e0b,#f97316);color:#0f172a}
-.b-pink{background:linear-gradient(90deg,#ec4899,#9333ea);border:1px solid rgba(249,168,212,.3)}
-.b-ghost{background:rgba(255,255,255,.14);color:#fde68a;border:1px solid rgba(255,255,255,.25);cursor:pointer}
-.b-cyan{background:rgba(6,182,212,.25);color:#a5f3fc;border:1px solid rgba(34,211,238,.35)}
-
-/* Modal */
-#modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(10,25,50,.8);padding:16px}
-#modal.show{display:flex}
-.mbox{width:100%;max-width:448px;padding:24px;border-radius:24px;background:#123058;border:1px solid rgba(252,211,77,.45);text-align:left}
-.mbox h3{color:#fcd34d;font-size:19px;margin-bottom:14px;display:flex;justify-content:space-between}
-.mbox h3 button{background:none;color:rgba(255,255,255,.6);font-size:24px;line-height:1}
-.mbox label{display:block;font-size:11px;font-weight:700;color:#fde68a;text-transform:uppercase;margin:12px 0 4px}
-.mbox input,.mbox textarea{width:100%;padding:10px 14px;border-radius:12px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);color:#fff;font:inherit;font-size:14px;outline:none;user-select:text;-webkit-user-select:text}
-.mbox input:focus,.mbox textarea:focus{border-color:#fbbf24}
-.mbox small{display:block;font-size:11px;color:rgba(255,255,255,.7);margin-top:4px}
-.mact{display:flex;justify-content:flex-end;gap:8px;margin-top:22px}
 
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 </style>
@@ -162,8 +136,7 @@ footer{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30
         <span>🎊</span>
       </div>
 
-      <h1 id="mainTitle" class="title">CHÚC MỪNG! <br>FREYA-SAN'S 5TH WORK ANNIVERSARY
- ✨</h1>
+      <h1 id="mainTitle" class="title">CHÚC MỪNG! <br>FREYA-SAN'S 5TH WORK ANNIVERSARY ✨</h1>
 
       <div class="cd">
         <div class="cd-row"><span>⏳ Món quà video sắp bắt đầu...</span><b id="cdNum">3.0s</b></div>
@@ -175,10 +148,9 @@ footer{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30
   <!-- STAGE 2 -->
   <section id="videoStage" class="stage off">
     <div class="vhead">
-      <div class="tag">🎬 KHOẢNH KHẮC ĐẶC BIỆT</div>
       <h2 id="vTitle" class="title">FREYA-SAN'S 5TH WORK ANNIVERSARY ✨</h2>
       <p id="vSub" class="sub">Keep shining, keep inspiring, and keep being amazing! Here's to more success, laughter, and unforgettable moments with TIGER 💖✨
- <br>Chúc Freya-san luôn rạng rỡ, tràn đầy năng lượng và tiếp tục chinh phục thêm nhiều cột mốc đáng tự hào!  🎉</p>
+ <br>Chúc Freya-san luôn rạng rỡ, tràn đầy năng lượng và tiếp tục chinh phục thêm nhiều cột mốc đáng tự hào!  </p>
     </div>
 
     <div class="frame">
@@ -186,7 +158,6 @@ footer{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30
       <div class="vwrap">
         <video id="vid" playsinline loop muted controls preload="metadata"
                poster="https://placehold.co/1280x720/123058/ffd700?text=Chuc+Mung+Dac+Biet">
-          <source src="FREYA.mp4" type="video/mp4">
           <source src="FREYA.mp4" type="video/mp4">
         </video>
         <canvas id="fb" class="hidden"></canvas>
@@ -196,30 +167,6 @@ footer{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30
     </div>
   </section>
 </main>
-
-<footer>
-  <button class="btn b-gold" id="btnReplay">🎆 Xem lại từ đầu (3s)</button>
-  <button class="btn b-pink" id="btnBurst">🎉 Bắn siêu pháo hoa!</button>
-  <label class="btn b-ghost">📁 Chọn Video của bạn<input id="fileIn" type="file" accept="video/*" class="hidden"></label>
-  <button class="btn b-cyan" id="btnEdit">✏️ Tùy chỉnh</button>
-</footer>
-
-<div id="modal">
-  <div class="mbox">
-    <h3><span>✨ Tùy chỉnh lời chúc &amp; Video</span><button id="mClose" type="button">&times;</button></h3>
-    <label>Tiêu đề chúc mừng</label>
-    <input id="inTitle" type="text" value="CHÚC MỪNG! ✨">
-    <label>Lời chúc chi tiết</label>
-    <textarea id="inSub" rows="3">Chúc bạn luôn rạng rỡ, tràn ngập niềm vui và gặt hái thật nhiều thành công tuyệt vời! 🌟🥳</textarea>
-    <label>Link Video MP4 (Tùy chọn)</label>
-    <input id="inUrl" type="url" placeholder="https://example.com/video.mp4">
-    <small>Hoặc bấm "Chọn Video của bạn" ở thanh dưới để lấy video từ máy.</small>
-    <div class="mact">
-      <button class="btn b-ghost" id="mCancel" type="button">Đóng</button>
-      <button class="btn b-gold" id="mSave" type="button">Lưu &amp; Chạy lại 🎆</button>
-    </div>
-  </div>
-</div>
 
 <script>
 (() => {
@@ -399,7 +346,7 @@ function startSequence() {
 
   videoStage.classList.add('off');
   greeting.classList.remove('off');
-  statusText.textContent = '🎆 Đang bắn pháo hoa chúc mừng (chuyển sang Video sau 4s)...';
+  statusText.textContent = '🎆 Đang bắn pháo hoa chúc mừng (chuyển sang Video sau 3s)...';
   intense = true;
 
   for (let i = 0; i < (LITE ? 3 : 5); i++) setTimeout(launch, i * 140);
@@ -410,13 +357,13 @@ function startSequence() {
 
   const t0 = performance.now(); let lastTxt = -1;
   (function tick(now) {
-    const left = Math.max(0, 4000 - (now - t0));
+    const left = Math.max(0, 3000 - (now - t0));
     const txt = Math.ceil(left / 100);
     if (txt !== lastTxt) { cdNum.textContent = (left / 1000).toFixed(1) + 's'; lastTxt = txt; }
     if (left > 0) cdRaf = requestAnimationFrame(tick);
   })(t0);
 
-  seqTimer = setTimeout(toVideo, 4000);
+  seqTimer = setTimeout(toVideo, 3000);
 }
 
 function toVideo() {
@@ -464,30 +411,6 @@ function stopFallback() { fbOn = false; $('fb').classList.add('hidden'); }
 vid.addEventListener('error', fallbackAnim, true);
 vid.addEventListener('playing', stopFallback);
 
-/* ================= Tuỳ chỉnh & upload ================= */
-$('fileIn').addEventListener('change', e => {
-  const f = e.target.files[0]; if (!f) return;
-  if (vid.dataset.blob) URL.revokeObjectURL(vid.dataset.blob);
-  const u = URL.createObjectURL(f); vid.dataset.blob = u;
-  vid.src = u; vid.load(); stopFallback(); startSequence();
-});
-const modal = $('modal');
-const showModal = s => modal.classList.toggle('show', s);
-$('btnEdit').onclick = () => showModal(true);
-$('mClose').onclick = $('mCancel').onclick = () => showModal(false);
-$('mSave').onclick = () => {
-  const t = $('inTitle').value.trim() || 'CHÚC MỪNG! ✨';
-  const s = $('inSub').value.trim() || 'Chúc bạn luôn rạng rỡ và hạnh phúc!';
-  const u = $('inUrl').value.trim();
-  $('mainTitle').textContent = $('vTitle').textContent = t;
-  if ($('mainSub')) $('mainSub').textContent = s;
-  $('vSub').textContent = s;
-  if (u) { vid.src = u; vid.load(); stopFallback(); }
-  showModal(false); startSequence();
-};
-
-$('btnReplay').onclick = startSequence;
-$('btnBurst').onclick = grandBurst;
 unmuteBtn.onclick = enableAudio;
 addEventListener('pointerdown', initAudio, { once: true });
 
